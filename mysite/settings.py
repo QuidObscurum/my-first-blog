@@ -119,4 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = [os.path.join(BASE_DIR, 'static')] #solved the css_404 problem 
+#by adding square brackets
+#But stackoverflow suggests:
+#'Remove STATIC_ROOT Add STATICFILES_DIRS'
